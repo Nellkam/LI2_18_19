@@ -30,7 +30,7 @@ void loadTabuleiro (char tabuleiro[][TAB_C],int dimensao[2]){
     fscanf(myFile,"%d %d",dimensao,dimensao+1); // le 1º linha dimensao
     fgetc(myFile); // remove \n
 
-    for (linha=0 ; linha<dimensao[1] ; linha++){
+    for (linha=0 ; linha<dimensao[0] ; linha++){
         fgets( &(tabuleiro[linha][0]) , dimensao[1]+2 , myFile );
     }
 
@@ -44,7 +44,7 @@ void saveTabuleiro ( char tabuleiro[][TAB_C], int dimensao[2] ){
     
     fprintf(myFile,"%d %d\n",dimensao[0],dimensao[1]);
 
-    for(linhas=0 ; linhas<dimensao[1] ; linhas++)
+    for(linhas=0 ; linhas<dimensao[0] ; linhas++)
         fprintf(myFile,"%s", &(tabuleiro[linhas][0])  );
 
     fclose(myFile);  
@@ -54,7 +54,7 @@ void saveTabuleiro ( char tabuleiro[][TAB_C], int dimensao[2] ){
 void showTabuleiro ( char tabuleiro[][TAB_C] , int dimensao[2] ){
     int linhas=0;
 
-    for(linhas=0 ; linhas<dimensao[1] ; linhas++)
+    for(linhas=0 ; linhas<dimensao[0] ; linhas++)
         printf("%s", &(tabuleiro[linhas][0]) );
 
 }
