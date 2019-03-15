@@ -17,7 +17,7 @@ int main(){
         choice=getchar();
         clearBuffer();
         CLEARMYSCREEN;
-    } while (!validMenuChoice(choice);
+    } while (!validMenuChoice(choice));
 
     // executa escolha do menu
     switch (choice){
